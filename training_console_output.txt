@@ -1,0 +1,36 @@
+AI Spam Message Detector - Evaluation Report
+================================================
+Dataset rows after cleaning/deduplication: 5157
+Training rows: 4125
+Test rows: 1032
+Selected model (highest spam F1): Logistic Regression
+
+Model comparison:
+Multinomial Naive Bayes: accuracy=0.9632, spam_precision=1.0000, spam_recall=0.7031, spam_f1=0.8257
+Logistic Regression: accuracy=0.9709, spam_precision=0.8889, spam_recall=0.8750, spam_f1=0.8819
+
+Classification report:
+              precision    recall  f1-score   support
+
+         ham       0.98      0.98      0.98       904
+        spam       0.89      0.88      0.88       128
+
+    accuracy                           0.97      1032
+   macro avg       0.94      0.93      0.93      1032
+weighted avg       0.97      0.97      0.97      1032
+
+
+Saved model: spam_model.joblib
+Saved metrics: model_metrics.json
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.

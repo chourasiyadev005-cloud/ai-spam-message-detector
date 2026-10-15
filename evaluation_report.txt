@@ -1,0 +1,20 @@
+AI Spam Message Detector - Evaluation Report
+================================================
+Dataset rows after cleaning/deduplication: 5157
+Training rows: 4125
+Test rows: 1032
+Selected model (highest spam F1): Logistic Regression
+
+Model comparison:
+Multinomial Naive Bayes: accuracy=0.9632, spam_precision=1.0000, spam_recall=0.7031, spam_f1=0.8257
+Logistic Regression: accuracy=0.9709, spam_precision=0.8889, spam_recall=0.8750, spam_f1=0.8819
+
+Classification report:
+              precision    recall  f1-score   support
+
+         ham       0.98      0.98      0.98       904
+        spam       0.89      0.88      0.88       128
+
+    accuracy                           0.97      1032
+   macro avg       0.94      0.93      0.93      1032
+weighted avg       0.97      0.97      0.97      1032
